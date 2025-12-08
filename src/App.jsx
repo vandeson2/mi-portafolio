@@ -1,13 +1,18 @@
-
+import React from "react"
+import { Hero } from "./components/Hero"
+import { NavBar } from "./components/NavBar"
+import { About } from "./components/About"
 
 
 function App() {
 
   return (
-    <div className='bg-red-500'>
-      <h1 className='text-3xl font-bold underline'>
-        Prueba Tailwind CSS con Vite y React
-      </h1>
+    <div className="min-h-screen bg-white">
+      <NavBar />
+      <main>
+        <Hero />
+        <About />
+      </main>
     </div>
   )
 }
