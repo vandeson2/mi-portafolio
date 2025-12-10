@@ -2,6 +2,7 @@ import React from "react"
 import { Hero } from "./components/Hero"
 import { NavBar } from "./components/NavBar"
 import { About } from "./components/About"
+import { Skills } from "./components/Skills"
 
 
 function App() {
@@ -12,6 +13,7 @@ function App() {
       <main>
         <Hero />
         <About />
+        <Skills />
       </main>
     </div>
   )
