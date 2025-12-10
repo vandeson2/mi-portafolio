@@ -142,7 +142,7 @@ const FormContact = ({formEndpoint}) => {
                             <Send size={24} /> 
                              Enviar Mensaje
                             </span>
-                        )};
+                        )}
 
                     </button>
                 </>
