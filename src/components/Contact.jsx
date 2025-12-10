@@ -5,9 +5,9 @@ export function Contact () {
     const formspreeUrl = import.meta.env.VITE_FORMSPREE_URL;
 
     const contactInfo = [
-        {icon: Mail, title: 'Correo Electrónico', text:'Vandeson2@gmail.com', link: 'mailto:vandeson2@gmail.com'},
-        {icon: Phone, title:'Teléfono', text: '+34 682 665 710', link: 'tel:+34682665710'},
-        {icon: Linkedin, title:'LinkedIn', text:'linkedin.com/in/vandeson-sena', link: 'https://www.linkedin.com/in/vandeson-sena/'},
+        {id: 1, icon: Mail, title: 'Correo Electrónico', text:'Vandeson2@gmail.com', link: 'mailto:vandeson2@gmail.com'},
+        {id: 2, icon: Phone, title:'Teléfono', text: '+34 682 665 710', link: 'tel:+34682665710'},
+        {id: 3, icon: Linkedin, title:'LinkedIn', text:'linkedin.com/in/vandeson-sena', link: 'https://www.linkedin.com/in/vandeson-sena/'},
     ]
     return (
         <section
@@ -16,7 +16,8 @@ export function Contact () {
         >
 
             {/* Efectos de fondo */}
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_80%,rgba(6,182,212,0.08),transparent_50%)]"></div>
+            <div className="absolute inset-0 pointer-events-none bg-[radial-gradient(circle_at_50%_80%,rgba(6,182,212,0.08),transparent_50%)]"></div>
+
 
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 reltive z-10">
                 <div className="flex flex-col items-center text-center mb-20">
@@ -35,8 +36,8 @@ export function Contact () {
                             <p className="text-gray-400 text-lg leading-relaxed mb-4">Estoy activamente buscando mi primera oportunidad profesional para aplicar y expandir mi stack técnico.</p>
                             <p className="text-cyan-400 text-lg leading-relaxed">¿Hablamos sobre como puedo aportar valor tu equipo?</p>
                         </div>
-                        {contactInfo.map((info, index) => (
-                            <div key={info.title} className="flex items-star gap-8 group">
+                        {contactInfo.map((info) => (
+                            <div key={info.id} className="flex items-star gap-8 group">
                                 <div className="bg-gradient-to-br from-cyan-400 to-blue-500 p-3 text-white rounded-xl flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
                                     <info.icon size={24} />
                                 </div>
