@@ -1,4 +1,3 @@
-import portadaWeb from '../assets/portada-web.jpg';
 import {Briefcase, Calendar, MapPin, Link}  from 'lucide-react';
 export function Experiences () {
 
@@ -68,6 +67,8 @@ export function Experiences () {
                             >
                                 {/* Punto*/}
                                <div className='absolute left-0 md:left-1/2 top-8 w-4 h-4 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-full transform -translate-x-1/2 ring-4 ring-black shadow-cyan-500/50'></div>/
+                                
+                                {/*Card*/}
                                 <div className='group bg-white/5 backdrop-blur-xl rounded-2xl p-8 ml-8 md:ml-0 shadow-2xl hover:shadow-cyan-500/20 transition-all duration-500 border border-white/10 hover:bg-white/10 hover:borde-white/20'>
                                    <div className='mb-6'>
                                         <div className='flex items-start justify-between flex-wrap gap-4 mb-3'>
