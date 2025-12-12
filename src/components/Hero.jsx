@@ -12,8 +12,8 @@ export function Hero(){
             className="min-h-screen flex items-center justify-center pt-16 overflow-hidden relative bg-gradient-to-br from-gray-900 via-black to-gray-900 "
             id="inicio"
         >
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(6,182,212,0.1),transparent_50%)]"></div>
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%, rgba(6,182,212,0.08), transparent_40%)]"></div>
+            <div className="absolute pointer-events-none inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(6,182,212,0.1),transparent_50%)]"></div>
+            <div className="absolute pointer-events-none inset-0 bg-[radial-gradient(circle_at_80%_20%, rgba(6,182,212,0.08), transparent_40%)]"></div>
             <div className="grid md:grid-cols-2 gap-8 items-center">
                 {/*Foto de perfil*/}
                 <div className="flex items-center justify-center">
@@ -42,20 +42,20 @@ export function Hero(){
                     <div className="flex justify-start gap-5 pt-5">
                         <a 
                             href="#"
-                            className="p-3 rounded-full bg-white/5 backdrop-blur-xl shadow-lg hover:bg-white/10 trasition-all duration-300 hover:scale-110 transform border border-white/10"
+                            className="p-3 rounded-full bg-white/5 backdrop-blur-xl shadow-lg hover:bg-white/10 transition-all duration-300 hover:scale-110 transform border border-white/10"
                         
                         > 
                             <Github className="text-gray-300" size={24}/> 
                         </a>
                         <a 
                             href="#"
-                             className="p-3 rounded-full bg-white/5 backdrop-blur-xl shadow-lg hover:bg-white/10 trasition-all duration-300 hover:scale-110 transform border border-white/10"
+                             className="p-3 rounded-full bg-white/5 backdrop-blur-xl shadow-lg hover:bg-white/10 transition-all duration-300 hover:scale-110 transform border border-white/10"
                         >
                             <Linkedin className="text-cyan-400" size={24}/>
                         </a>
                         <a 
                             href="#"
-                             className="p-3 rounded-full bg-white/5 backdrop-blur-xl shadow-lg hover:bg-white/10 trasition-all duration-300 hover:scale-110 transform border border-white/10"
+                             className="p-3 rounded-full bg-white/5 backdrop-blur-xl shadow-lg hover:bg-white/10 transition-all duration-300 hover:scale-110 transform border border-white/10"
                         >
                             <Mail className="text-gray-300" size={24}/>
                         </a>
