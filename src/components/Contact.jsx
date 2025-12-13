@@ -29,38 +29,41 @@ export function Contact () {
 
                 </div>
 
-                <div className="grid md:grid-cols-2 gap-16 items-center">
+                <div className="grid md:grid-cols-2 gap-16 items-start">
                     <div className="space-y-8">
                         <div>
                             <h3 className="text-white text-3xl tracking-tight mb-8">Conectemos</h3>
                             <p className="text-gray-400 text-lg leading-relaxed mb-4">Estoy activamente buscando mi primera oportunidad profesional para aplicar y expandir mi stack técnico.</p>
                             <p className="text-cyan-400 text-lg leading-relaxed">¿Hablamos sobre como puedo aportar valor tu equipo?</p>
                         </div>
-                        {contactInfo.map((info) => (
-                            <div key={info.id} className="flex items-star gap-8 group">
-                                <div className="bg-gradient-to-br from-cyan-400 to-blue-500 p-3 text-white rounded-xl flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
-                                    <info.icon size={24} />
-                                </div>
-                                <div>
-                                    <h4 className="text-white  text-lg">{info.title}</h4>
-                                    {info.link? (
-                                        <a
-                                            href={info.link}
-                                            className="text-gray-400 hover:text-cyan-400 transition-colors duration-300"
-                                        >
-                                        {info.text}
-                                        </a>
-                                    ) : (
-                                        <p className="text-gray-400">{info.text}</p>
-                                    
-                                    )}
+                        <div className="space-y-6">
+                            {contactInfo.map((info) => (
+                                <div key={info.id} className="flex items-star gap-8 group">
+                                    <div className="bg-gradient-to-br from-cyan-400 to-blue-500 p-3 text-white rounded-xl flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
+                                        <info.icon size={24} />
+                                    </div>
+                                    <div>
+                                        <h4 className="text-white  text-lg">{info.title}</h4>
+                                        {info.link? (
+                                            <a
+                                                href={info.link}
+                                                target="_blank"
+                                                className="text-gray-400 hover:text-cyan-400 transition-colors duration-300"
+                                            >
+                                            {info.text}
+                                            </a>
+                                        ) : (
+                                            <p className="text-gray-400">{info.text}</p>
+                                        
+                                        )}
 
+                                    </div>
                                 </div>
-                            </div>
-                        ))}
+                            ))}
+                        </div>
 
                     </div>
-                    <div className="bg-white/5 p-8 rounded-2xl shadow-2xl backdrop-blur-xl border border-white/10">
+                    <div className="bg-white/5 p-8  rounded-2xl shadow-2xl backdrop-blur-xl border border-white/10">
                         <FormContact formEndpoint={formspreeUrl}/>
 
                     </div>

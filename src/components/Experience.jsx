@@ -35,7 +35,7 @@ export function Experiences () {
 
     return (
         <section
-            id='experiencia'
+            id='experiencias'
             className= 'bg-gradient-to-b from-black to-gray-900 overflow-hidden relative py-32'
         >
             {/* Efectos de fondo */}
@@ -101,6 +101,7 @@ export function Experiences () {
                                                 <Link size={16} className='text-cyan-400' />
                                                 <a 
                                                     href='https://www.vicentellinares.com/'
+                                                    target="_blank"
                                                     className='text-gray-400 hover:text-cyan-500'
                                                 >
                                                     {exp.link}

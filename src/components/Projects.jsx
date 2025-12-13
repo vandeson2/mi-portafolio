@@ -21,6 +21,9 @@ export function Projects () {
             id="proyectos"
             className="bg-black overflow-hidden relative py-32"
         >
+        {/*Efecto de fondo */}    
+       <div className="absolute inset-0 pointer-events-none bg-[radial-gradient(120%_60%_at_50%_0%,rgba(6,182,212,0.1),transparent_50%)]"></div>
+
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div className="flex flex-col items-center text-center mb-20">

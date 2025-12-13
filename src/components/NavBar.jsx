@@ -29,11 +29,12 @@ export function NavBar(){
 
 
     const navItems = [
-        {name: 'Inicio', href:'#'},
-        {name: 'Sobre mí', href:'#'},
-        {name: 'Habilidades', href:'#'},
-        {name: 'Proyectos', href:'#'},
-        {name: 'Contacto', href:'#'},
+        {name: 'Inicio', href:'#inicio'},
+        {name: 'Sobre mí', href:'#sobre-mi'},
+        {name: 'Experiencias', href: '#experiencias'},
+        {name: 'Habilidades', href:'#habilidades'},
+        {name: 'Proyectos', href:'#proyectos'},
+        {name: 'Contacto', href:'#contacto'},
 
     ];
 
