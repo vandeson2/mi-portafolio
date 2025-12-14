@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Send } from "lucide-react";
-
+import { motion } from "motion/react";
 const FormContact = ({formEndpoint}) => {
     const [formData, setFormData] = useState({
         name:'',
@@ -146,9 +146,12 @@ const FormContact = ({formEndpoint}) => {
 
                     </button>
                 </>
-                <div >
+                <motion.div
+                    initial={{opacity:0 , y:10}}
+                    animate={{opacity: 1, y:0}}
+                 >
                 {renderStatusMessage()}
-                </div>
+                </motion.div>
             </form>  
         </>  
 

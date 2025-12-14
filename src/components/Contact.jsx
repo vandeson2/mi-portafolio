@@ -1,5 +1,6 @@
 import { Mail, Phone, Linkedin } from "lucide-react"
 import { FormContact } from "./FormContact"
+import { motion } from "motion/react";
 
 export function Contact () {
     const formspreeUrl = import.meta.env.VITE_FORMSPREE_URL;
@@ -20,25 +21,44 @@ export function Contact () {
 
 
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-                <div className="flex flex-col items-center text-center mb-20">
+                <motion.div 
+                    initial={{opacity:0 , y:20}}
+                    whileInView={{opacity:1, y:0}}
+                    viewport={{ once: true}}
+                    transition={{duration: 0.8}}
+                    className="flex flex-col items-center text-center mb-20"
+                >
                     <h2 className="text-white text-5xl sm:text-6xl lg:text-7xl mb-6 tracking-tight">Contacto</h2>
                     <div className="w-40 h-1 bg-gradient-to-r from-cyan-400 to-blue-500 mx-auto mb-6"></div>
                     <p className="text-gray-400 text-lg leading-relaxed max-w-2xl mx-auto">
                         Si busca un desarrollador Frontend Junior en React y Tailwind CSS que prioriza el código limpio y las buenas práctiicas, me encantaria conocer tu proyecto.
                     </p>
 
-                </div>
+                </motion.div>
 
                 <div className="grid md:grid-cols-2 gap-16 items-start">
-                    <div className="space-y-8">
+                    <motion.div 
+                        initial={{opacity:0 ,x:-30}}
+                        whileInView={{opacity: 1, x:0}}
+                        viewport={{once: true}}
+                        transition={{duration: 0.8}}
+                        className="space-y-8"
+                    >
                         <div>
                             <h3 className="text-white text-3xl tracking-tight mb-8">Conectemos</h3>
                             <p className="text-gray-400 text-lg leading-relaxed mb-4">Estoy activamente buscando mi primera oportunidad profesional para aplicar y expandir mi stack técnico.</p>
                             <p className="text-cyan-400 text-lg leading-relaxed">¿Hablamos sobre como puedo aportar valor tu equipo?</p>
                         </div>
                         <div className="space-y-6">
-                            {contactInfo.map((info) => (
-                                <div key={info.id} className="flex items-star gap-8 group">
+                            {contactInfo.map((info, index) => (
+                                <motion.div
+                                    initial={{opacity:0, x: -20}}
+                                    whileInView={{opacity:1 ,x:0}}
+                                    viewport={{once:  true}}
+                                    transition={{duration:0.6, delay: index * 0.1}}
+                                    key={info.id} 
+                                    className="flex items-star gap-8 group"
+                                >
                                     <div className="bg-gradient-to-br from-cyan-400 to-blue-500 p-3 text-white rounded-xl flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
                                         <info.icon size={24} />
                                     </div>
@@ -58,15 +78,21 @@ export function Contact () {
                                         )}
 
                                     </div>
-                                </div>
+                                </motion.div>
                             ))}
                         </div>
 
-                    </div>
-                    <div className="bg-white/5 p-8  rounded-2xl shadow-2xl backdrop-blur-xl border border-white/10">
+                    </motion.div>
+                    <motion.div 
+                        initial={{opacity:0 ,x:30}}
+                        whileInView={{opacity:1, x:0}}
+                        viewport={{once: true}}
+                        transition={{duration: 0.8}}
+                        className="bg-white/5 p-8  rounded-2xl shadow-2xl backdrop-blur-xl border border-white/10"
+                    >
                         <FormContact formEndpoint={formspreeUrl}/>
 
-                    </div>
+                    </motion.div>
                 </div>
 
             </div>

@@ -1,4 +1,5 @@
 import { Code2, Users, Palette, Rocket } from "lucide-react"
+import { motion } from "framer-motion"
 
 export function About(){
 
@@ -34,15 +35,27 @@ export function About(){
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(6,182,212,0.05),transparent_50%)]"></div>
 
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-                <div className="flex flex-col items-center text-center mb-20">
+                <motion.div 
+                    initial={{opacity:0 ,y: 20}}
+                    whileInView={{opacity:1 ,y: 0}}
+                    viewport={{once: true}}
+                    transition={{duration: 0.8}}
+                    className="flex flex-col items-center text-center mb-20"
+                >
                     <h2 className="text-white mb-6 text-5xl sm:text-6xl lg:text-7xl tracking-tight">
                         Sobre Mí
                     </h2>
                     <div className="w-40 h-1 bg-gradient-to-r from-cyan-400 to-blue-500 max-auto"></div>
-                </div>
+                </motion.div>
 
                 <div className="grid md:grid-cols-2 gap-16 items-center">
-                    <div className="space-y-6">
+                    <motion.div 
+                        initial={{opacity:0, x:-30}}
+                        whileInView={{opacity:1, x:0}}
+                        viewport={{once: true}}
+                        transition={{duration: 0.8}}
+                        className="space-y-6"
+                    >
                         <p className="text-gray-400 text-lg leading-relaxed">
                            Soy desarrollador Frontend Junior con un enfoque centrado en la experiencia 
                            de usuario, el rendimiento y la calidad del código. Acabo de completar el ciclo 
@@ -62,10 +75,14 @@ export function About(){
                             Busco un primer empleo en presencial o en entorno remoto, donde pueda aportar 
                             desde el primer día, aprender en equipo y crecer profesionalmente.
                         </p>
-                    </div>
+                    </motion.div>
                     <div className="space-y-6">
                         {highlight.map((item, index) => (
-                            <div
+                            <motion.div
+                                initial={{opacity:0, y:20}}
+                                whileInView={{opacity:1, y:0}}
+                                viewport={{once: true}}
+                                transition={{duration: 0.6, delay: index * 0.2}}
                                 key={item}
                                 className="group flex gap-4 p-7 bg-white/5 rounded-2xl backdrop-blur-xl border border-white/10 hover:border-white/20 hover:bg-white/10 transiton-all duration-500"
                             >
@@ -78,7 +95,7 @@ export function About(){
                                     <h3 className="text-white text-lg mb-2">{item.title}</h3>
                                     <p className="text-gray-400 leading-relaxed">{item.description}</p>
                                 </div>
-                            </div>    
+                            </motion.div>    
                         ))}
 
                     </div>

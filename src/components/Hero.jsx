@@ -1,6 +1,6 @@
 import {  Github,Linkedin, Mail, ArrowDown } from "lucide-react"
 import avatar from "../assets/avatar.png"
-
+import { motion } from "framer-motion"
 
 export function Hero(){
     const scrollToAbout = () => {
@@ -21,29 +21,47 @@ export function Hero(){
                 <div className="grid md:grid-cols-2 gap-8 items-center">
                     {/*Foto de perfil*/}
                     <div className="flex items-center justify-center">
-                        <div className="relative w-80 h-96">
+                        <motion.div 
+                            initial={{opacity: 0, x: -50}}
+                            animate={{opacity: 1, x: 0 }}
+                            transition={{duration: 0.8, ease: "easeOut"}}
+                            className="relative w-80 h-96"
+                        >
                             <img 
                             src={avatar} alt="foto de perfil" 
                             className="w-full h-full object-contain drop-shadow-2xl"
                             />
-                        </div>
+                        </motion.div>
                     </div>
 
                     {/*Contenido de texto*/}
                     <div className="space-y-8 text-left">
-                        <h1 className="text-5xl sm:text-6xl lg:text-7xl text-white tracking-tight">
+                        <motion.h1 
+                            initial={{opacity: 0, y: 20}}
+                            animate={{opacity:1, y:0}}
+                            transition={{duration: 0.8, delay: 0.2}}
+                            className="text-5xl sm:text-6xl lg:text-7xl text-white tracking-tight"
+                        >
                             Vandeson Sena 
                             <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent ml-3"> 
                             Desarrollador Frontend Junior
                             </span>
-                        </h1>
-                        <p
+                        </motion.h1>
+                        <motion.p
+                            initial={{opacity:0, y: 20}}
+                            animate={{opacity: 1, y: 0}}
+                            transition={{duration: 0.8, delay:0.4}}
                             className=" text-xl sm:text-2xl max-w-xl text-gray-400 leading-relaxed"
                         >
                             Construyo interfaces accesibles, rápidas y modernas con React, JavaScript y Tailwind CSS.
-                        </p>
+                        </motion.p>
 
-                        <div className="flex justify-start gap-5 pt-5">
+                        <motion.div 
+                            initial={{opacity:0, y:20}}
+                            animate={{opacity:1, y:0}}
+                            transition={{duration: 0.8, delay:0.6}}
+                            className="flex justify-start gap-5 pt-5"
+                            >
                             <a 
                                 href="https://github.com/vandeson2"
                                 target="_blank"
@@ -65,9 +83,14 @@ export function Hero(){
                             >
                                 <Mail className="text-gray-300" size={24}/>
                             </a>
-                        </div>
+                        </motion.div>
 
-                        <div className="flex flex-col sm:flex-row justify-start gap-5 pt-8">
+                        <motion.div 
+                            initial={{opacity:0, y:20}}
+                            animate={{opacity:1, y:0}}
+                            transition={{duration:0.8, delay:0.8}}
+                            className="flex flex-col sm:flex-row justify-start gap-5 pt-8"
+                        >
                             <a 
                                 href="#contacto"
                                 onClick={(e) => {
@@ -87,14 +110,17 @@ export function Hero(){
                             >
                                 Descargar CV
                             </a>
-                        </div>
+                        </motion.div>
 
-                        <button
+                        <motion.button
+                            initial={{opacity:0}}
+                            animate={{opacity:1}}
+                            transition={{duration: 1, delay: 1.2}}
                             onClick={scrollToAbout}
                             className="inline-block text-gray-500 animate-bounce mt-20 hover:text-cyan-400 transition-colors"
                         >
                             <ArrowDown size={42} />
-                        </button>
+                        </motion.button>
                     </div>
                 </div>
             </div>

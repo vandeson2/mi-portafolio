@@ -10,6 +10,7 @@ import mysql from "../assets/icons/mysql.png";
 import java from "../assets/icons/java.png";
 import firebase from "../assets/icons/firebase.png";
 import go from "../assets/icons/go.png";
+import { motion } from "motion/react";
 
 export function Skills () {
 
@@ -36,15 +37,26 @@ export function Skills () {
              <div className="absolute inset-0 pointer-events-none bg-[radial-gradient(140%_70%_at_50%_100%,rgba(6,182,212,0.1),transparent_50%)]"></div>
 
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-                <div className="flex flex-col items-center text-center mb-20">
+                <motion.div 
+                    initial={{opacity:0, y:20}}
+                    whileInView={{opacity:1, y:0}}
+                    viewport={{once: true}}
+                    transition={{duration: 0.8}}
+                    className="flex flex-col items-center text-center mb-20"
+                >
                     <h2 className="text-5xl sm:text-6xl lg:text-7xl text-white mb-6 tracking-tight">Habilidades Técnicas</h2>
                     <div className="w-70 h-1 bg-gradient-to-r from-cyan-400 to-blue-500 mx-auto"></div>
-                </div>
+                </motion.div>
 
                 <div  className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-6">
-                    {skills.map((skill) =>(
-                        <div
-                            key={skills.skill}
+                    {skills.map((skill, index) =>(
+                        <motion.div
+                            initial={{opacity:0, scale:0.8}}
+                            whileInView={{opacity:1, scale:1}}
+                            viewport={{once: true}}
+                            transition={{duration: 0.5, delay: index * 0.5}}
+                            whileHover={{scale: 1.1, y:-10}}
+                            key={skills.name}
                             className="flex flex-col justify-center items-center gap-4 bg-white/5 group p-5 rounded-2xl shadow-2xl backdrop-blur-xl border
                              border-white/10 hover:border-cyan-400/50 transition-all duration-500 hover:bg-white/10 hover:shadow-cyan-400/20 "
                         >
@@ -55,7 +67,7 @@ export function Skills () {
                         
 
 
-                        </div>
+                        </motion.div>
 
                     ))}
                 </div>

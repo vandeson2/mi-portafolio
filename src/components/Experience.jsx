@@ -1,4 +1,5 @@
 import {Briefcase, Calendar, MapPin, Link}  from 'lucide-react';
+import { motion, transform } from 'motion/react';
 export function Experiences () {
 
     const experiences = [
@@ -44,12 +45,16 @@ export function Experiences () {
            
             <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10'>
 
-                <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10'>
-                    <div className='flex flex-col justify-center items-center text-center mb-20 ' >
-                        <h2 className='text-white text-5xl sm:text-6xl lg:text-7xl mb-6 tracking-tight'>Experiencias</h2>
-                        <div className= 'w-40 h-1 bg-gradient-to-r from-cyan-400 to-blue-500 mx-auto'></div>
-                    </div>
-                </div>
+                <motion.div 
+                    initial={{opacity:0 ,y: 20}}
+                    whileInView={{opacity:1, y:0}}
+                    viewport={{once: true}}
+                    transition={{duration: 0.8}}
+                    className='flex flex-col justify-center items-center text-center mb-20'
+                >
+                    <h2 className='text-white text-5xl sm:text-6xl lg:text-7xl mb-6 tracking-tight'>Experiencias</h2>
+                    <div className= 'w-40 h-1 bg-gradient-to-r from-cyan-400 to-blue-500 mx-auto'></div>
+                </motion.div>
 
                 <div className='max-w-5xl mx-auto'>
                     <div className='relative'>
@@ -57,12 +62,16 @@ export function Experiences () {
                         <div className='absolute left-0 md:left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-cyan-400 via-blue-500 to-cyan-400 transform md:-translate-x-1/2'></div>
                         
                         {experiences.map((exp, index) =>(
-                            <div
-                             key={exp.company + exp.period}
-                             className={`relative mb-16 md:mb-24 ${
-                                index % 2 === 0
-                                ? "md:pr-[calc(50%+2rem)] md:text-left"
-                                : "md:pl-[calc(50%+2rem)] md:text-left"
+                            <motion.div
+                                initial={{opacity:0, y:40}}
+                                whileInView={{opacity:1, y:0}}
+                                viewport={{once:true}}
+                                transition={{duration:0.6 , delay: index * 0.2,}}
+                                key={exp.company + exp.period}
+                                className={`relative mb-16 md:mb-24 ${
+                                    index % 2 === 0
+                                    ? "md:pr-[calc(50%+2rem)] md:text-left"
+                                    : "md:pl-[calc(50%+2rem)] md:text-left"
                              }`}
                             >
                                 {/* Punto*/}
@@ -142,7 +151,7 @@ export function Experiences () {
                                 </div>
 
 
-                            </div>
+                            </motion.div>
                         ))}
                     </div>
                 </div>
