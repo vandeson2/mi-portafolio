@@ -1,52 +1,53 @@
-#  Portafolio Profesional - Desarrollador Frontend Junior
+# 💼 Professional Portfolio — Junior Frontend Developer
 
-Portafolio personal desarrollado con **React 19**, **JavaScript** y **Tailwind CSS**.  
-Este proyecto reúne mis principales trabajos, habilidades técnicas y experiencia inicial como desarrollador frontend.
+Personal portfolio developed with **React 19**, **JavaScript**, and **Tailwind CSS**.  
+This project showcases my main work, technical skills, and early experience as a frontend developer.
 
-Está enfocado en buenas prácticas, diseño responsivo y una experiencia de usuario clara y agradable.
-
-👉 **[Read this README in English](README_en.md)**
+It focuses on best practices, responsive design, and delivering a clear and pleasant user experience.
 
 ---
+
 ## 🛠️ Tech Stack
 
-- **React 19** — Desarrollo de interfaces basadas en componentes
+- **React 19** — Component-based UI development
 - **JavaScript (ES6+)**
-- **Tailwind CSS** — Estilos y diseño responsive
-- **Vite** — Entorno de desarrollo rápido
+- **Tailwind CSS** — Responsive and utility-first styling
+- **Vite** — Fast development environment
 
-### Librerías
-- Framer Motion — Animaciones básicas
-- React Router DOM — Navegación
-- Formspree — Formulario de contacto
+### Libraries
+- Framer Motion — Basic animations
+- React Router DOM — Navigation
+- Formspree — Contact form handling
 
-### Herramientas
+### Tools
 - Git & GitHub
 - ESLint
 
 ---
 
-### 🎯 Secciones del Portafolio
+## 🎯 Portfolio Sections
 
-- Hero — Presentación principal
-- Acerca de Mí — Perfil y objetivos profesionales
-- Experiencia — Proyectos personales y prácticas
-- Habilidades Técnicas — Tecnologías que utilizo
-- Proyectos — Trabajos destacados con enlaces a GitHub
-- Contacto — Formulario funcional
-
-
-### 🎨 Diseño y UX
-
-- Diseño responsive (mobile-first)
-- Interfaz clara y fácil de navegar
-- Animaciones sutiles con Framer Motion
-- Buen uso de colores y tipografía
-- Enfoque en la experiencia de usuario
+- Hero — Main introduction
+- About Me — Profile and career goals
+- Experience — Personal projects and practice
+- Technical Skills — Technologies I use
+- Projects — Featured work with GitHub links
+- Contact — Functional contact form
 
 ---
 
-## 📁 Estructura del Proyecto
+## 🎨 Design & UX
+
+- Responsive design (mobile-first)
+- Clean and easy-to-navigate interface
+- Subtle animations with Framer Motion
+- Consistent use of colors and typography
+- Focus on user experience
+
+---
+
+## 📁 Project Structure
+
 
 ```
 mi-portafolio/
@@ -77,29 +78,28 @@ mi-portafolio/
 ├── eslint.config.js              # Configuración de ESLint
 └── README.md                      # Este archivo
 ```
-## 📦 Instalación y Uso Local
+## 📦 Installation & Local Usage
+Follow these steps to run the project locally:
 
-Sigue estos pasos para ejecutar el proyecto en tu entorno local:
-
-1. Clona el repositorio:
+1. Clone the repository:
 ```bash
 git clone https://github.com/vandeson2/mi-portafolio.git
 ```
 
-2. Acceder al directorio del proyecto:
+2. Navigate to the project directory:
 cd. mi-portafolio
 
-3. Instalar las dependencias:
+3. Install dependencies:
 npm install
 
-4. iniciar el servidor de desarrollo:
+4. Start the development server:
 npm run dev
 
-La aplicación estará disponible en: http://localhost:5173
+The application will be available at: http://localhost:5173
 
-## 🌐 Contacto y Redes
+## 🌐 Contact
 
-¿Te interesa colaborar o conocer más sobre mis proyectos?
+Interested in collaborating or learning more about my work?
 
 - 📧 **Email**: [vandeson2@gmail.com](mailto:vandeson2@gmail.com)
 - 💼 **LinkedIn**: [Vandeson Sena](https://www.linkedin.com/in/vandeson-sena/)
@@ -107,6 +107,6 @@ La aplicación estará disponible en: http://localhost:5173
 
 ---
 
-## 📄 Licencia
+## 📄 License
 
-Este proyecto está bajo la licencia **MIT**.
+This project is licensed under the MIT License.
