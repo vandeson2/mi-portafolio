@@ -1,4 +1,4 @@
-import web from "../assets/web.jpg"
+import proyecto1 from "../assets/proyecto1.jpeg"
 import { Github } from "lucide-react";
 import { motion } from "framer-motion"
 
@@ -9,7 +9,7 @@ export function Projects () {
         {
             title: 'Sistema de Gestión de Reservas para Gimnasio',
             stat: 'En producción',
-            pic: web,
+            pic: proyecto1,
             roleType: 'Proyecto Personal',
             description: 'Aplicacióon full stack en producción para gestionar reservas, horarios y usuarios. Desarrollé la interfaz completa, el panel de administración y la estructura de datos, implementado sincronización de tiempo real con Firebase. El diseño es responsive y centrado en mejorar la experiencia de usuario.',
             tags: ['React.js', 'JavaScript', 'Tailwind CSS', 'Firebase (Firestore)'],

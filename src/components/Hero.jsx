@@ -1,5 +1,5 @@
 import {  Github,Linkedin, Mail, ArrowDown } from "lucide-react"
-import avatar from "../assets/avatar.png"
+import fotoHero from "../assets/fotoHero.png"
 import { motion } from "framer-motion"
 
 export function Hero(){
@@ -10,7 +10,7 @@ export function Hero(){
 
     return (
         <section
-            className="min-h-screen  flex items-center justify-center overflow-hidden relative bg-gradient-to-br from-gray-900 via-black to-gray-900 "
+            className="min-h-screen flex items-center justify-center overflow-hidden relative bg-gradient-to-br from-gray-900 via-black to-gray-900 "
             id="inicio"
         >
             {/*Efecto fondo */}
@@ -20,15 +20,15 @@ export function Hero(){
            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32 relative z-10">
                 <div className="grid md:grid-cols-2 gap-8 items-center">
                     {/*Foto de perfil*/}
-                    <div className="flex items-center justify-center">
+                    <div className="flex items-center justify-center sm:-mt-70">
                         <motion.div 
                             initial={{opacity: 0, x: -50}}
                             animate={{opacity: 1, x: 0 }}
                             transition={{duration: 0.8, ease: "easeOut"}}
-                            className="relative w-80 h-96"
+                            className="relative w-80 h-96 "
                         >
                             <img 
-                            src={avatar} alt="foto de perfil" 
+                            src={fotoHero} alt="foto de perfil" 
                             className="w-full h-full object-contain drop-shadow-2xl"
                             />
                         </motion.div>
