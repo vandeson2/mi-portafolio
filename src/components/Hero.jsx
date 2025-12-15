@@ -104,7 +104,7 @@ export function Hero(){
                             </a>
 
                             <a 
-                                href="public\CV_Vandeson_Sena.pdf"
+                                href="\CV_Vandeson_Sena.pdf"
                                 target="_blank"
                                 className="inline-block text-white  rounded-full px-8 py-4 bg-white/5 border border-white/10 backdrop-blur-xl hover:bg-white/10 transition-all duration-300 hover:scale-105 "
                             >
