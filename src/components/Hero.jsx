@@ -14,23 +14,34 @@ export function Hero(){
             id="inicio"
         >
             {/*Efecto fondo */}
-            <div className="absolute pointer-events-none inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(6,182,212,0.1),transparent_50%)]"></div>
+            {/*<div className="absolute pointer-events-none inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(6,182,212,0.1),transparent_50%)]"></div>*/}
             <div className="absolute pointer-events-none inset-0 bg-[radial-gradient(circle_at_80%_20%, rgba(6,182,212,0.08), transparent_40%)]"></div>
            
-           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32 relative z-10">
+           <div className="max-w-7xl mx-auto mb-40 sm:px-6 lg:px-8 py-32 relative z-10">
                 <div className="grid md:grid-cols-2 gap-8 items-center">
                     {/*Foto de perfil*/}
-                    <div className="flex items-center justify-center sm:-mt-70">
+                    
+                    <div className="flex items-center justify-center sm:-mt-70 relative group">
+                        <div className="absolute w-72 h-72 bg-cyan-500/20 blur-[120px] rounded-full "></div>
+                        <div className="absolute w-40 h-40 bg-blue-400/10 blur-[80px] rounded-full"></div>
+                     
+
                         <motion.div 
                             initial={{opacity: 0, x: -50}}
                             animate={{opacity: 1, x: 0 }}
                             transition={{duration: 0.8, ease: "easeOut"}}
-                            className="relative w-80 h-96 "
+                            className="relative w-72 h-80 f sm:w-80 sm:h-96 "
                         >
                             <img 
                             src={fotoHero} alt="foto de perfil" 
-                            className="w-full h-full object-contain drop-shadow-2xl"
+                            className="w-full h-full object-contain drop-shadow-[0_0_20px_rgba(6,182,212,0.2)]"
+
+                            style={{
+                                maskImage: 'linear-gradient(to bottom, black 75%, transparent 100%)',
+                                WebkitMaskImage: 'linear-gradient(to bottom, black 75%, transparent 100%)'
+                        }}                                                    
                             />
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent pointer-events-none"></div>       
                         </motion.div>
                     </div>
 
