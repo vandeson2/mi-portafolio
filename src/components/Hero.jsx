@@ -55,7 +55,7 @@ export function Hero(){
                         >
                             Vandeson Sena 
                             <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent ml-3"> 
-                            Desarrollador Frontend Junior
+                            Junior Data Analyst & Full Stack Developer
                             </span>
                         </motion.h1>
                         <motion.p
@@ -64,7 +64,7 @@ export function Hero(){
                             transition={{duration: 0.8, delay:0.4}}
                             className=" text-xl sm:text-2xl max-w-xl text-gray-400 leading-relaxed"
                         >
-                            Construyo interfaces accesibles, rápidas y modernas con React, JavaScript y Tailwind CSS.
+                            Transformando datos en soluciones mediante <strong>Python, SQL y React.</strong>
                         </motion.p>
 
                         <motion.div 

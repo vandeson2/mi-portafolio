@@ -1,28 +1,23 @@
-import { Code2, Users, Palette, Rocket } from "lucide-react"
+import { Code2, BarChart3, Cpu } from "lucide-react"
 import { motion } from "framer-motion"
 
 export function About(){
 
     const highlight =[
         {
-            icon: Rocket,
-            title: 'Desarrollador Junior',      
-            description: 'Mi mayor skill es mi capacidad de aprender y adaptarme rápidamente.'
+            icon: BarChart3,
+            title: 'Análista de Datos',      
+            description: 'Expecializado en la extracción de insights de valor y limpieza de datos mediante el uso de Python y Pandas.'
         },
         {
             icon: Code2,
-            title: 'Código Limpio',
-            description: 'Aprendo y aplico las mejores prácticas para escribir código limpio y mantenible.',
+            title: 'Desarrollo Full Stack',
+            description: 'Creación de aplicaciones robustas y escalables con React y JavaScript, enfocada en una lógica de negocio eficiente.',
         },
         {
-            icon: Palette,
-            title: 'Perfección del Diseño',
-            description: 'Meticuloso en el detalle. Me esfuerzo por la implementación Pixel-Perfect.',
-        },
-        {
-            icon: Users,
-            title: 'Centrado en el Usuario',
-            description: 'Me esfuerzo por entender las necesidades del usuario para crear experiencias intuitivas y atractivas.',
+            icon: Cpu,
+            title: 'Bases de Datos & APIs',
+            description: 'Experiencia en diseño de estructuras de datos y gestión de bases de datos relacionales y no relacionales con SQL y Firebase.',
         },
     ];
     
@@ -57,23 +52,19 @@ export function About(){
                         className="space-y-6"
                     >
                         <p className="text-gray-400 text-lg leading-relaxed">
-                           Soy desarrollador Frontend Junior con un enfoque centrado en la experiencia 
-                           de usuario, el rendimiento y la calidad del código. Acabo de completar el ciclo 
-                           formativo de Desarrollo de Aplicaciones Web (DAW) en MEDAC. 
+                            Desarrollador web y analista de datos junior con fromación sólida en <b>Desarrollo
+                            de Aplicaciones Web (DAW)</b>. Actualmente, potencio mis capacidades mediante 
+                            un <b>Máster en Data Science e IA</b>. Mi perfil une lo mejor de dos mundos, 
+                            la capacidades de construir interfaces interactivas y robustas con <b>React</b> 
+                            y el poder de extraer insights de valor mediante <b>Python y Pandas</b>.
                         </p>
                         <p className="text-gray-400 text-lg leading-relaxed">
-                            Mi stack principal incluye React.js, JavaScript moderno, HTML5 y Tailwind CSS, 
-                            lo que me permite construir interfaces responsivas y mantenibles.
-                        </p>
-                        <p className="text-gray-400 text-lg leading-relaxed">
-                           He trabajado en proyectos reales, desde tiendas online hasta sistemas 
-                           internos, lo que me ha enseñado a afrontar desde diseño de UI hasta lógica, 
-                           data y despliegue. Me apasiona seguir aprendiendo: actualmente profundizó en 
-                           TypeScript y testing (Jest). 
-                        </p>
-                        <p className="text-gray-400 text-lg leading-relaxed">
-                            Busco un primer empleo en presencial o en entorno remoto, donde pueda aportar 
-                            desde el primer día, aprender en equipo y crecer profesionalmente.
+                            He aportado soluciones en proyectos reales, desde el desarrollo una tienda online
+                            hasta sistemas de gestión interna y automatización de procesos. Esta experiencia 
+                            me ha permitido dominar el ciclo completo de un producto. Desde el diseño de UI 
+                            y la lógica de negocio hasta la gestión de dases de datos y el despliegue.
+                            Mi objetivo es seguir creando soluciones tecnológicas eficientes, escalables 
+                            y sobre todo <b>orientada a datos</b>.
                         </p>
                     </motion.div>
                     <div className="space-y-6">
