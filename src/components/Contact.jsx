@@ -31,8 +31,8 @@ export function Contact () {
                     <h2 className="text-white text-5xl sm:text-6xl lg:text-7xl mb-6 tracking-tight">Contacto</h2>
                     <div className="w-40 h-1 bg-gradient-to-r from-cyan-400 to-blue-500 mx-auto mb-6"></div>
                     <p className="text-gray-400 text-lg leading-relaxed max-w-2xl mx-auto">
-                        Si busca un desarrollador Frontend Junior en React y Tailwind CSS que prioriza el código limpio y las buenas práctiicas, me encantaria conocer tu proyecto.
-                    </p>
+                        Su buscas un perfil con mentalidad analítica, capaz de transforma datos en estrategias y contruir las herramientas necesarias para visualizarlos, me encantaría conocer tu proyecto.
+                   </p>
 
                 </motion.div>
 

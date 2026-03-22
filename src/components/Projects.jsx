@@ -1,11 +1,30 @@
 import proyecto1 from "../assets/proyecto1.jpeg"
+import project_sql from "../assets/project_sql.jpg"
+import project_python from "../assets/project_python.png"
 import { Github } from "lucide-react";
 import { motion } from "framer-motion"
 
 export function Projects () {
 
     const projects = [
-        
+        {
+            title: 'E-Commerce ELT Pipeline',
+            stat: 'En producción',
+            pic: project_sql,
+            roleType: 'Data Engineering / Analysis',
+            description: 'Pipeline ELT que procesa +100k registros de Olist. Incluye modelado relacional en SQL y extracción de KPIs estratégicos de negocio.',
+            tags: ['SQL', 'MySQL', 'ETL', 'Data Analysis'],
+            gitHub: 'https://github.com/vandeson2/brazilian-ecommerce-elt-pipeline',
+        },
+        {
+            title:'Bangkok Airbnb Analysis',
+            stat: 'En producción',
+            pic: project_python,
+            roleType: 'Data Analysis / Insights',
+            description: 'Investigación del mercado turístico en Bangkok analizando +28k alojamientos. Identificación de patrones de precios, calidad y recuperación post-COVID.',
+            tags: ['Python', 'Pandas', 'Seaborn', 'EDA'],
+            gitHub:'https://github.com/vandeson2/bangkok_airbnb_analysis',
+        },
         {
             title: 'Sistema de Gestión de Reservas para Gimnasio',
             stat: 'En producción',
@@ -49,10 +68,10 @@ export function Projects () {
                         className={`bg-white/5  backdrop-blur-xl overflow-hidden shadow-2xl rounded-2xl group  hover:shadow-cyan-500/20 transition-all duration-500 border border-white/10 hover:border/20 
                             ${projects.length === 1 ? "max-w-lg w-full" : ""}`} 
                     >
-                        <div className="relative  h-56 overflow-hidden">
+                        <div className="relative  h-56 overflow-hidden bg-neutral-900/50">
                             <img 
                                 src={project.pic} alt={project.title} 
-                                className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                                className="w-full h-full object-contain p-2 group-hover:scale-110 transition-transform duration-700"
                             />
                             <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                         </div>
